@@ -1,8 +1,9 @@
+const ImageGalleryItem = ({img, onImageClick}, {key}) => {
+    return (
+            <li key={key}>
+            <img src={img.webformatURL} alt={img.tags} onClick={onImageClick} />
+            </li>
+    )
+}
 
-
-// Компонент элемента списка с изображением. Создает DOM-элемент следующей
-// структуры.
-
-// <li class="gallery-item">
-//   <img src="" alt="" />
-// </li>
+export default ImageGalleryItem

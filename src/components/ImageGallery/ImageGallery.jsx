@@ -1,8 +1,17 @@
+import ImageGalleryItem from "components/ImageGalleryItem/ImageGalleryItem"
 
+const ImageGallery = ({images, onImageClick}) => {
+    return (
+        <ul>
+            {images.map(image => (
+                <ImageGalleryItem
+                    key={image.id}
+                    img={image}
+                    onImageClick={onImageClick} />
+))}
+                        
+        </ul>
+    )
+}
 
-
-// Список карточек изображений. Создает DOM-элемент следующей структуры.
-
-// <ul class="gallery">
-//   <!-- Набор <li> с изображениями -->
-// </ul>
+export default ImageGallery

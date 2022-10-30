@@ -1,4 +1,7 @@
+import { ThreeDots } from "react-loader-spinner";
 
+const Loader = () => {
+    return <ThreeDots color="darkblue" />
+}
 
-// Компонент спинера, отображется пока идет загрузка изобаржений. Используй любой
-// готовый компонент, например react-loader-spinner или любой другой.
+export default Loader
