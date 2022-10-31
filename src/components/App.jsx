@@ -46,7 +46,7 @@ class App extends Component {
             return response.json();
           }
 
-          return Promise.reject( new Error(`There is no images with value ${this.state.searchQuery}`))
+          return Promise.reject( new Error(`Sorry, there is no images with value ${this.state.searchQuery}`))
         })
         .then(data => {
           if (data.totalHits !== 0) {
@@ -73,7 +73,7 @@ class App extends Component {
   }
 
   closeModal = () => {
-    this.setState({isModalOen: false, modalImage: ''})
+    this.setState({isModalOpen: false, modalImage: ''})
   }
 
   render() {
@@ -86,7 +86,7 @@ class App extends Component {
         height: '100vh',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
           }}>
 
           <Searchbar onSubmit={this.handleFormSubmit} />

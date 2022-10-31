@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 
+import { ErrorMessage } from './Error.styled';
+
 const Error = ({ message }) => {
     return (
-        <div>{message}</div>
+        <ErrorMessage>{message}</ErrorMessage>
     )
 }
 

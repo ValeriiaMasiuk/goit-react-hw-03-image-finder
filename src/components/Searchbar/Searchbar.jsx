@@ -1,8 +1,8 @@
 import { Component } from "react"; 
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { AiOutlineSearch } from "react-icons/ai";
 
+import { SearchBar, SearchForm, SearchBtn, Input, SearchIcon } from "./Searchbar.styled";
 
 class Searchbar extends Component {
   state = {
@@ -25,13 +25,13 @@ class Searchbar extends Component {
  
 render() {
     return (          
-          <header>
-            <form onSubmit={this.handleSubmit}>
-              <button type="submit">
-                <AiOutlineSearch/>
-              </button>
+          <SearchBar>
+            <SearchForm onSubmit={this.handleSubmit}>
+              <SearchBtn type="submit">
+                <SearchIcon/>
+              </SearchBtn>
 
-              <input
+              <Input
                 type="text"
                 autoComplete="off"
                 autoFocus
@@ -39,8 +39,8 @@ render() {
             onChange={this.handleInputChange}
             value={this.state.inputValue}
               />
-              </form>
-            </header>
+              </SearchForm>
+            </SearchBar>
   );
   }
 
